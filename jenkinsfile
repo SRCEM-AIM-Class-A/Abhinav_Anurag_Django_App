@@ -2,15 +2,15 @@ pipeline {
     agent any
     environment {
         // Jenkins credential ID for Docker Hub (ensure this exists in Jenkins)
-        DOCKERHUB_CREDENTIALS = credentials('abhinav0705-dockerhub')
+        DOCKERHUB_CREDENTIALS = credentials('disha1911-dockerhub')
         // Docker image name and tag (pushes to your Docker Hub repository)
-        IMAGE_NAME = "abhinav0705/djangoapp:latest"
+        IMAGE_NAME = "disha1911/djangoapp:latest"
     }
     stages {
         stage('Checkout') {
             steps {
                 // Checkout the code from your GitHub repository on the main branch.
-                git url: 'https://github.com/SRCEM-AIM-Class-A/Abhinav_Anurag_Django_App.git', branch: 'main'
+                git url: 'https://github.com/SRCEM-AIM-Class-A/Disha_Chauhan_Django_App.git', branch: 'main'
             }
         }
         stage('Build Docker Image') {
